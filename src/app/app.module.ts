@@ -41,6 +41,7 @@ import { ContactComponent } from './contact/contact.component';
     RouterModule,
     MatMenuModule,
     MatButtonModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

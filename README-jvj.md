@@ -64,4 +64,9 @@ childRoutes: Routes = [
 
 Added the wildcard route activating the NotFoundComponent and turned on debugging
 
+## Demo: Hooking into Router Events
+
+Instead of turning on debugging in the forRoot, hook into the router event where the 
+component router-outlet is defined, i.e. in app.component.ts  ngOnInit, tapping into Router.events
+or through in app.component.html adding activate event to router-outlet
 

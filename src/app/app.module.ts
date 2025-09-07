@@ -46,7 +46,9 @@ export const ROUTES : Routes = [
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES, {enableTracing: true} )
+    RouterModule.forRoot(ROUTES,
+      // {enableTracing: true}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

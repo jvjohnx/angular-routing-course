@@ -22,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 export const ROUTES : Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({
@@ -45,7 +46,7 @@ export const ROUTES : Routes = [
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, {enableTracing: true} )
   ],
   providers: [],
   bootstrap: [AppComponent]

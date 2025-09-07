@@ -19,4 +19,49 @@ Notice that the app now doesn't display the <app-home> component.  This will be 
 
 Added ROUTES array .  the the route for empty path '' should be pathMatch=full
 
+## Discussion: Child Routes and Route Order
+Angular combines Child and Root routes to create the path.  Angular adds the forChild routes first then
+adds the forRoot routes so that the more specific routes comes before the less specific routes.
+
+```
+forRoot [
+ path: 'home', component: 'homeComponent',
+ path: '' ,  redirectTo: 'home'
+]
+
+forChild [
+  path: 'home/child1', component: 'ChildOneComponent',
+  path: 'home/child2', component: 'ChildTwoComponent'
+]
+
+
+In the combined Array, child routes comes first
+
+routes [
+  path: 'home/child1', component: 'ChildOneComponent',
+  path: 'home/child2', component: 'ChildTwoComponent'
+  path: 'home', component: 'homeComponent',
+  path: '' ,  redirectTo: 'home"
+]
+
+```
+
+Standalone components use different strategy to declar childRoutes
+
+```aiignore
+const appRoutes: Routes = [
+ {path: 'home', component: 'homeComponent', children: childRoutes} //Note the children property
+ {path: '' ,  redirectTo: 'home' }
+];
+
+childRoutes: Routes = [
+    {path: 'child-one', component: ChildOneComponent},  //Note: child path are relative
+    {path: 'child-two', component: ChildTwoComponent},
+]
+```
+
+## Demo: Declaring a Wildcard Route
+
+Added the wildcard route activating the NotFoundComponent and turned on debugging
+
 

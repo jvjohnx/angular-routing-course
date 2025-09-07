@@ -70,3 +70,6 @@ Instead of turning on debugging in the forRoot, hook into the router event where
 component router-outlet is defined, i.e. in app.component.ts  ngOnInit, tapping into Router.events
 or through in app.component.html adding activate event to router-outlet
 
+# Module: Routing in Standalone Component Applications
+
+checkout module-four-start branch and continue from there

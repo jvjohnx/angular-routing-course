@@ -22,3 +22,14 @@ configured bootstrapApplication with provideRouter and added  withDebugTracing()
 ## Discussion: Introduction to RouterLink
 ## Demo: Add RouterLinks to Template Elements
 Adding RouterLink to template 
+
+## Discussion: Styling the Active Element with RouterLinkActive, Demo: Style Active Links with RouterLinkActive
+
+Use routerLinkActive to show which link the user just clicked.
+
+## Discussion: Navigating Programmatically/Demo: Routing from Classed with RouterService
+Want to navigate initiated not from the template. E.g. session timeout, error.
+
+### methods for navigation:
+navigate() relative or absolute, needs path segmants 
+navigateByUrl() - absolute path

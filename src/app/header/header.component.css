@@ -47,6 +47,7 @@
   top: -5px;
 }
 
+/* This style is used in routerLinkActive.  Make for font slight larger and a shadow around the text */
 .active-link {
   font-size: 16px;
   font-weight: 800;

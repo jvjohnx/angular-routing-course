@@ -71,4 +71,15 @@ Overall flow
 - setter sets the category in the pieService using setSelectedCategory(categoryId)
 
 
+## Discussion: Understanding Optional Parameters
+
+ActivatedRoute has 2 commonly used Observables. queryParams and queryParamMap where we can subscribe to get 
+the queryParameters.  
+
+In our app, to get to a product, we can access through side-menu or the card-component of the home-view.
+
+To add the queryParam to the side-menu, remove the click event in the side-menu.component.html
+and add routerLink and routerLinkActive.
+
+in the pie.service.ts, set the selectedPie from queryParameter using 'activatedRoute.queryParamMap' .
 

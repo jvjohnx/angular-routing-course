@@ -25,9 +25,10 @@ export class CardComponent {
   selectPie(pie: Pie) {
     // removed setting pieCategory directly into the pieService from here and use 2nd arg to the routerLink
     // activatedComponent of ship/categoryId is ProductsViewComponent, which handles setting categoryId in pieService
-    this.pieService.setSelectedPie(pie.id);
     this.router.navigate([`../${ROUTER_TOKENS.SHOP}`, pie.category], {
-      relativeTo: this.activatedRoute
+      relativeTo: this.activatedRoute,
+      queryParams: {productId: pie.id},
+      queryParamsHandling: 'merge'
     });
   }
 }
